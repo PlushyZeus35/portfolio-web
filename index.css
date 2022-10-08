@@ -16,6 +16,10 @@ h2, small, p{
     z-index: 5;
 }
 
+#home{
+    padding-top: 100px;
+}
+
 .mainInfo h2{
     font-size: xx-large;
     font-weight: bolder;
@@ -307,9 +311,6 @@ h5{
         display: none;
     }
 
-    #home{
-        padding-top: 100px;
-    }
 }
 
 /* md breakpoint */
