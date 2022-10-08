@@ -1,0 +1,327 @@
+:root {
+    --mainColour: #1A1A40;
+    --secondaryColour: #270082;
+    --lightContrastColour: #7A0BC0;
+    --highContrastColour: #FA58B6;
+}
+
+html{
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+h2, small, p{
+    color: white;
+    z-index: 5;
+}
+
+.mainInfo h2{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.mainInfo p{
+    font-size: x-large;
+}
+
+#extraInfo{
+    margin-bottom: 20px;
+    font-size: large;
+    font-style: italic;
+}
+
+strong{
+    color: wheat;
+}
+
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+main{
+    min-height: 90vh;
+    max-width: 100vw;
+    background-color: var(--mainColour);
+}
+/* BUBBLES */
+#bubbles{
+    width: 100vw;
+    display: flex;
+}
+
+.bubble{
+    position: absolute;
+    background-color: var(--mainColour);
+    z-index: 0;
+}
+
+.bubble:nth-child(1){
+    width: 60px;
+    height: 60px;
+    right: 80vw;
+    animation: bubbled 15s linear infinite;
+}
+
+.bubble:nth-child(2){
+    width: 120px;
+    height: 120px;
+    right: 70vw;
+    animation: bubblei 23s linear infinite;
+}
+
+.bubble:nth-child(3){
+    width: 80px;
+    height: 80px;
+    right: 60vw;
+    animation: bubbled 19s linear infinite;
+}
+
+.bubble:nth-child(4){
+    width: 20px;
+    height: 20px;
+    right: 50vw;
+    animation: bubblei 6s linear infinite;
+}
+
+.bubble:nth-child(5){
+    width: 180px;
+    height: 180px;
+    right: 40vw;
+    animation: bubbled 40s linear infinite;
+}
+
+.bubble:nth-child(6){
+    width: 200px;
+    height: 200px;
+    right: 30vw;
+    animation: bubblei 45s linear infinite;
+}
+
+.bubble:nth-child(7){
+    width: 110px;
+    height: 110px;
+    right: 20vw;
+    animation: bubbled 28s linear infinite;
+}
+
+.bubble:nth-child(8){
+    width: 50px;
+    height: 50px;
+    right: 10vw;
+    animation: bubblei 21s linear infinite;
+}
+
+.bubble:nth-child(9){
+    width: 100px;
+    height: 100px;
+    right: 5px;
+    animation: bubbled 32s linear infinite;
+}
+
+.bubble:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 55vw;
+    animation: bubblei 17s linear infinite;
+}
+
+.bubble:nth-child(11){
+    width: 80px;
+    height: 80px;
+    left: 14vw;
+    animation: bubbled 30s linear infinite;
+}
+
+.bubble:nth-child(12){
+    width: 120px;
+    height: 120px;
+    left: -9vw;
+    animation: bubblei 34s linear infinite;
+}
+
+.bubble:nth-child(13){
+    width: 100px;
+    height: 100px;
+    left: 5px;
+    animation: bubbled 25s linear infinite;
+}
+
+@keyframes bubbled {
+    0%{
+        rotate: -360deg;
+        bottom: 0;
+        opacity: 1;
+    }
+    50%{
+        bottom: -50vh;
+    }
+    70%{
+        opacity: 0.5;
+    }
+    100%{
+        bottom: -150vh;
+        opacity: 0.1;  
+    }
+}
+
+@keyframes bubblei {
+    0%{
+        rotate: 360deg;
+        bottom: 0;
+        opacity: 1;
+    }
+    50%{
+        bottom: -50vh;
+    }
+    70%{
+        opacity: 0.5;
+    }
+    100%{
+        bottom: -100vh; 
+        opacity: 0.1; 
+    }
+}
+
+.mainInfo{
+    padding: 20px 20px 30px 120px;
+}
+
+.topskill img{
+    width: 100px;
+}
+
+/* Timeline Container */
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+#timelines {
+    padding-top: 200px;
+    width: 100vw;
+    background: rgb(26,26,64);
+    background: linear-gradient(180deg,  var(--mainColour) 0%,  var(--secondaryColour) 25%);
+    display: flex;
+    justify-content: center;
+}
+
+.timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+}
+  
+/* Outer Layer with the timeline border */
+.outer {
+    border-left: 2px solid #333;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    background: #333;
+    color: gray;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Title of the card */
+.title {
+    color: var(--highContrastColour);
+    position: relative;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.list-group, .list-group-item{
+    background-color: transparent;
+    color: white;
+}
+
+#projects{
+    background-color: var(--secondaryColour);
+}
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -38px;
+    border: 3px solid var(--highContrastColour);
+}
+
+h5{
+    margin: 0;
+    padding: 0;
+}
+
+.location{
+    display: flex;
+    justify-content: end;
+}
+
+#contact{
+    visibility: hidden;
+}
+
+
+/* lg breakpoint */
+@media screen and (max-width: 992px) {
+    .maindiv{
+        flex-direction: column-reverse;
+    }
+
+    #imgAvatar{
+        width: 250px;
+        margin-bottom: 25px;
+    }
+
+    #extraInfo, .mainInfo h2{
+       text-align: center;
+    }
+
+    .mainInfo{
+        padding: 0 10px;
+    }
+
+    #contact{
+        visibility: visible;
+    }
+
+    #contacto{
+        display: none;
+    }
+
+    #home{
+        padding-top: 100px;
+    }
+}
+
+/* md breakpoint */
+@media screen and (max-width: 768px) {
+    #timelines{
+        flex-direction: column;
+    }
+}
+
+/* sm breakpoint */
+@media screen and (max-width: 580px) {
+    #bubbles{
+        display: none;
+    }
+}
