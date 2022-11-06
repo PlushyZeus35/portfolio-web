@@ -1,0 +1,33 @@
+.col{
+    height: 50vh;
+}
+
+.cell{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.initial{
+    background-color: blueviolet;
+}
+
+.position{
+    background-color: rgba(0, 0, 255, 1);
+}
+
+.position2{
+    background-color: rgba(0, 0, 255, 0.4);
+}
+
+.goal{
+    background-color: red;
+}
+
+.blocked{
+    background-color: black;
+}
+
+td{
+    width:30%;
+}
