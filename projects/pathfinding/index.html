@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Algorithm</title>
+    <link rel="icon" type="image/x-icon" href="icon.PNG">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            Pathfinding Algorithm
+          </a>
+        </div>
+    </nav>
+    <div class="pathui pt-5">
+        <div id="legend" class="d-flex justify-content-center align-items-center">
+            <div class="d-flex align-items-center me-3">
+                <div class="cell initial"></div>
+                = Initial cell
+            </div>
+            <div class="d-flex align-items-center me-3">
+                <div class="cell goal"></div>
+                = Final cell
+            </div>
+            <div class="d-flex align-items-center me-3">
+                <div class="cell blocked"></div>
+                = Blocked cell
+            </div>
+            <div class="d-flex align-items-center me-3">
+                <div class="cell position"></div>
+                = Actual position
+            </div>
+        </div>
+        <div class="buttons d-flex justify-content-center align-items-center pt-5">
+            <div class="d-none form-check form-switch me-3">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Debug</label>
+            </div>
+            <div>
+                <select class="d-none form-select" aria-label="Default select example">
+                    <option selected value="0">Select debug level</option>
+                    <option value="1">Level one</option>
+                    <option value="2">Level two</option>
+                </select>
+            </div>
+            <div>
+                <label for="blockProbability" class="form-label">Block cell probability: <span id="rangeval">50</span> %</label>
+                <input type="range" class="form-range" min="0" max="100" id="blockProbability" onInput="probabilityChanged()">
+            </div>
+            
+        </div>
+        
+        <div id="path" class=" d-flex flex-column justify-content-center align-items-center p-5">
+            <!--<div class="pathrow d-flex">
+                <div class="cell position"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>-->
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-primary" onclick="runAlgorithm()">Run</button>
+        </div>
+        
+        <div id="debug" class="container pb-5">
+            <h3>A* Algorithm</h3>
+            <p>A* (pronounced "A-star") is a graph traversal and path search algorithm, which is used in many fields of computer science due to its completeness, optimality, and optimal efficiency. One major practical drawback is its O(b^d) space complexity, as it stores all generated nodes in memory. Thus, in practical travel-routing systems, it is generally outperformed by algorithms which can pre-process the graph to attain better performance, as well as memory-bounded approaches; however, A* is still the best solution in many cases.</p>
+            <ul class="list-group">
+                <li class="list-group-item">Github: <a href="">Github code</a></li>
+                <li class="list-group-item">Autor: <a href="https://www.plushyzeus.com/">PlushyZeus</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
